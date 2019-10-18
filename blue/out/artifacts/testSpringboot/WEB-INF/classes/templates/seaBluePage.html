@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <script th:src="@{/javaScript/echarts.js}"></script>
+</head>
+<body>
+123
+${name}
+
+<script type="text/javascript" th:inline="javascript">
+    var seaBlue2 = [[${name}]];
+    console.log(seaBlue2)
+    var seaBlueList = [[${seaBlueList}]]
+    console.log(seaBlueList)
+</script>
+</body>
+</html>

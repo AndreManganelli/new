@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="col-lg-3 col-md-12">
+    <form th:action="@{/saveSeaBlue}" th:object="${seaBlueProduct}" method="post">
+        <div class="card">
+            <div class="card-header card-header-warning">
+                <h4 class="card-title">海兰褐详情</h4>
+            </div>
+            <div class="form-group">
+                <label >stage</label>
+                <input type="text" th:field="*{stage}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >weekAge</label>
+                <input type="text" th:field="*{weekAge}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >dayAge</label>
+                <input type="text" th:field="*{dayAge}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >herds</label>
+                <input type="text" th:field="*{herds}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >weekOutRate</label>
+                <input type="text" th:field="*{weekOutRate}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >totalWeekOutNumber</label>
+                <input type="text" th:field="*{totalWeekOutNumber}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >dayFeedStand</label>
+                <input type="text" th:field="*{dayFeedStand}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >totalDayFeed</label>
+                <input type="text" th:field="*{totalDayFeed}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >weight</label>
+                <input type="text" th:field="*{weight}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >uniformity</label>
+                <input type="text" th:field="*{uniformity}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >eggProduceRate</label>
+                <input type="text" th:field="*{eggProduceRate}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >eggProduceNumber</label>
+                <input type="text" th:field="*{eggProduceNumber}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >eggWeight</label>
+                <input type="text" th:field="*{eggWeight}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >vaccineCost</label>
+                <input type="text" th:field="*{vaccineCost}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >preventiveCost</label>
+                <input type="text" th:field="*{preventiveCost}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >veterinaryDrugCost</label>
+                <input type="text" th:field="*{veterinaryDrugCost}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >materialCost</label>
+                <input type="text" th:field="*{materialCost}" class="form-control"  placeholder="Enter message">
+            </div>
+            <div class="form-group">
+                <label >maintainCost</label>
+                <input type="text" th:field="*{maintainCost}" class="form-control"  placeholder="Enter message">
+            </div>
+            <button type="submit" class="btn btn-primary">[[${message == null ? '中文':'英文'}]]</button>
+        </div>
+    </form>
+</div>
+
+
+<!-- detail-->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-tabs card-header-primary">
+                <h4 class="card-title">海兰褐详情     <span th:text="${seaBlueProduct.date}"></span></h4>
+            </div>
+            <form th:action="@{/saveSeaBlue}" th:object="${seaBlueProduct}" method="post">
+                <div class="card-body table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                        <th>阶段</th>
+                        <th>周龄</th>
+                        <th>日龄</th>
+                        <th>数量</th>
+                        <th>淘汰率</th>
+                        <th>总淘汰数</th>
+                        <th>日喂食</th>
+                        <th>总喂食</th>
+                        <th>重量</th>
+                        <th>均匀度</th>
+                        <th>鸡蛋生产比率</th>
+                        <th>鸡蛋生产数量</th>
+                        <th>鸡蛋重量</th>
+                        <th>疫苗费用</th>
+                        <th>防疫人工</th>
+                        <th>兽药费用</th>
+                        <th>材料费用</th>
+                        <th>维修人工</th>
+                        <th>修改|删除</th>
+                        </thead>
+                        <tbody>
+                        <td th:text="*{stage}"></td>
+                        <td th:text="*{weekAge}"></td>
+                        <td th:text="*{dayAge}"></td>
+                        <td th:text="*{herds}"></td>
+                        <td th:text="*{weekOutRate}"></td>
+                        <td th:text="*{totalWeekOutNumber}"></td>
+                        <td th:text="*{dayFeedStand}"></td>
+                        <td th:text="*{totalDayFeed}"></td>
+                        <td th:text="*{weight}"></td>
+                        <td th:text="*{uniformity}"></td>
+                        <td th:text="*{eggProduceRate}"></td>
+                        <td th:text="*{eggProduceNumber}"></td>
+                        <td th:text="*{eggWeight}"></td>
+                        <td th:text="*{vaccineCost}"></td>
+                        <td th:text="*{preventiveCost}"></td>
+                        <td th:text="*{veterinaryDrugCost}"></td>
+                        <td th:text="*{materialCost}"></td>
+                        <td th:text="*{maintainCost}"></td>
+                        <td>
+                            <button type="submit" class="btn btn-primary">[[${message == null ? '中文':'英文'}]]</button>
+                        </td>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
